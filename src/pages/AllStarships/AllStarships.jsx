@@ -3,7 +3,7 @@ import { getAllStarships } from '../../services/sw-api'
 import { Link } from 'react-router-dom'
 
 const AllStarships = () => {
-  const [AllStarships, setAllStarships] = useState([])
+  const [allStarships, setAllStarships] = useState([])
 
   useEffect(() => {
     const fetchAllStarships = async () => {
@@ -15,9 +15,9 @@ const AllStarships = () => {
   
   return (
     <>
-      {AllStarships.length ? 
+      {allStarships.length ? 
       <>
-        {AllStarships.map(starship => 
+        {allStarships.map(starship => 
           <div 
             key={starship.name}
             className="starship-card">
