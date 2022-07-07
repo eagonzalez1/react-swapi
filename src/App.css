@@ -42,3 +42,27 @@
   color: white;
   text-align: center;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px;
+}
+
+.starship-card {
+  border: 2px solid black;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(187, 236, 187);
+}
+
+.single-starship-card {
+  border: 2px solid black;
+  width: 400px;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(187, 236, 187);
+}

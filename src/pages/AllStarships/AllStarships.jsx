@@ -16,7 +16,7 @@ const AllStarships = () => {
   return (
     <>
       {allStarships.length ? 
-      <>
+      <div className='container'>
         {allStarships.map(starship => 
           <div 
             key={starship.name}
@@ -29,7 +29,7 @@ const AllStarships = () => {
             </Link><br/>
           </div>
         )}
-      </>
+      </div>
       :
       <>
         <h2>Loading starships...</h2>

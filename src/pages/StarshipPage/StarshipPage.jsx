@@ -19,11 +19,13 @@ const StarshipPage = () => {
   return (
     <>
       {starship.name ?
-      <> 
-        <h3>NAME: {starship.name}</h3>
-        <h3>MODEL: {starship.model}</h3>
-        <Link to="/">RETURN</Link>
-      </>
+      <div className='container'>
+        <div className="single-starship-card">
+          <h3>NAME: {starship.name}</h3>
+          <h3>MODEL: {starship.model}</h3>
+          <Link to="/">RETURN</Link>
+        </div> 
+      </div>
       :
       <>
         <h3>Loading Starship</h3>
