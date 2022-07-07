@@ -7,31 +7,32 @@ const AllStarships = () => {
 
   useEffect(() => {
     const fetchAllStarships = async () => {
-      const monsterData = await getAllStarships()
-      setAllStarships(monsterData.results)
+      const starshipData = await getAllStarships()
+      setAllStarships(starshipData.results)
     }
     fetchAllStarships()
   }, [])
   
   return (
     <>
-      <h3>Monster List (OMG SCARY)</h3>
       {AllStarships.length ? 
       <>
-        {AllStarships.map(monster => 
-          <div key={monster.index}>
+        {AllStarships.map(starship => 
+          <div 
+            key={starship.name}
+            className="starship-card">
             <Link
-              to="/monster"
-              state={{ monster }}
+              to="/starships"
+              state={{ starship }}
             >
-              {monster.name}
+              {starship.name}
             </Link><br/>
           </div>
         )}
       </>
       :
       <>
-        <h2>Loading scary monsters...</h2>
+        <h2>Loading starships...</h2>
       </>
       }
     </>
